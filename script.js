@@ -29,6 +29,9 @@ const checkWin = () => {
           
             document.querySelector(".info").innerText = text[e[0]].innerText + " Won";
             isgameover = true;
+            document
+              .querySelector(".imgbox")
+              .getElementsByTagName("img")[0].style.width = "150px";
             
         }
 
@@ -54,3 +57,21 @@ Array.from(boxes).forEach((element) => {
     }
     })
 })
+
+// let reset = document.getElementById("reset");
+reset.addEventListener("click", () => {
+let text = document.querySelectorAll(".textbox");
+Array.from(text).forEach((element) => {
+    element.innerText = "";
+})
+turn = "X";
+if (!isgameover) {
+    document.getElementsByClassName("info")[0].innerText = `Turn for ${turn}`;
+
+    }
+    document
+              .querySelector(".imgbox")
+              .getElementsByTagName("img")[0].style.width = "0px";
+})
+
+

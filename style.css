@@ -26,7 +26,7 @@ nav ul{
     list-style-type: none;
    
 }
-.gameContainer{
+.gamecontainer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,11 @@ nav ul{
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
     font-family: Roboto, sans-serif;
+    position: relative;
     
+}
+.gameinfo h1{
+    font-size: 2.5rem;
 }
 .box{
     border: 2px solid black;
@@ -57,7 +61,8 @@ nav ul{
 }
 
 .imgbox img{
-    display: none;
+    width: 0vh;
+    transition: width 1s ease-in-out;
 }
 .br-0{
     border-right: 0;
@@ -71,3 +76,41 @@ nav ul{
 .bb-0{
     border-bottom: 0;
 }
+
+#reset{
+    margin: 0 10px;
+    padding: 4px 20px;
+    background-color: rgb(230, 206, 235);
+    border-radius: 15px;
+
+}
+
+
+@media screen and (max-width:600px){
+   .gamecontainer{
+    flex-wrap: wrap;
+
+
+   }
+   .gameinfo{
+       margin-top: 34px;
+   } 
+   .gameinfo h1{
+         font-size: 1.2rem;
+   }
+   .container{
+    display: grid;
+    grid-template-columns: repeat(3, 24vw);
+    grid-template-rows: repeat(3, 18vw);
+    font-family: Roboto, sans-serif;
+    
+}
+    
+}
+/* .line{
+    width: 20vw;
+    background-color: plum;
+    height: 3px;
+    position: absolute;
+transform: translate(23vh, 24vh), rotate(45deg);
+} */
